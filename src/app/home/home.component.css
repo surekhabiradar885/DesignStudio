@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+.logo {
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  left: 366px;
+  margin-top: -80px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.08);
+  z-index: 1;
+}
+main {
+  display: flex;
+  position: relative;
+  width: 1906px;
+  height: 1000px;
+  margin-left: -10px;
+  flex: 1;
+  justify-content: center;
+  background-color: #f6cdcd;
+}
+.flex-grid {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.flex-grid .col-light {
+  width: 96px;
+  background-color: #e7f5f6;
+}
+.flex-grid .col-dark {
+  width: 24px;
+  background-color: #d6eaec;
+}
+.cell-content {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: medium;
+}
+.picker {
+  position: absolute;
+
+  display: flex;
+  flex-flow: row;
+  overflow: hidden;
+  /*   margin-top: 270px; */
+  width: 100%;
+  height: 70%;
+}
+
+.previous {
+  position: absolute;
+  background-color: #0c0a0a;
+  color: white;
+}
+
+.next {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 270px;
+  width: auto;
+}
+
+.card {
+  position: absolute;
+  border-radius: 4px;
+  height: 284px;
+  width: 216px;
+  font-size: 26px;
+
+  margin-left: 45px;
+  margin-top: 500px;
+  background-color: #f5f5f5;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  transform-origin: center bottom;
+}
+.card-text {
+  font-size: 20px;
+  font-family: Work Sans;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 575px) {
+  svg#rocket-smoke {
+    display: none;
+    visibility: hidden;
+  }
+}
