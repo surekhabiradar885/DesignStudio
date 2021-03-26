@@ -42,9 +42,12 @@ export class SliderComponent implements OnInit {
   };
 
   displaySlide = 5;
+  visible:number= 3;
+  breakpoint: number = 768;
   visibleSlide = [ ...Array(this.displaySlide).keys() ].map( i => i);
 
   sliderFlag: boolean = false;
+  width: any;
   constructor() {
     this.getScreensize();
   }
@@ -60,6 +63,7 @@ export class SliderComponent implements OnInit {
 
 @HostListener('window:resize', ['$event'])
 getScreensize(event?): void{
+  console.log("innerWidth size ",innerWidth)
    if (innerWidth >= 768 && innerWidth <= 1023){
       this.displaySlide = 3;
    }else if (innerWidth >= 320 && innerWidth <= 768){
@@ -67,7 +71,9 @@ getScreensize(event?): void{
    }else if (innerWidth > 1023){
     this.displaySlide = 5;
    }
+
    this.visibleSlide = [ ...Array(this.displaySlide).keys() ].map( i => i);
+   console.log("visible slide ", this.visibleSlide);
 }
 
   @HostListener('touchstart', ['$event'])
@@ -83,8 +89,7 @@ getScreensize(event?): void{
  @HostListener('touchmove', ['$event'])
  touchMove(event): void{
   event.preventDefault()
-  console.log( "touchmove ",event.preventDefault());
-}
+ }
 
 @HostListener('touchend', ['$event'])
  touchEnd(event): void{
@@ -110,8 +115,7 @@ getScreensize(event?): void{
     this.swipeArray.startY = event.clientY;
     this.swipeArray.startTime = new Date().getTime();
     event.preventDefault();
-    console.log( "mousedown ",event.stopPropagation());
-   
+     
 }
 
 @HostListener('mouseup', ['$event'])
