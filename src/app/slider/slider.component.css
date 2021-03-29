@@ -136,7 +136,8 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .text-div {
-        margin-left: 0px;
+        margin-left: 41px;
+        font-size: 15px;
     }
     .what-are-you {
         font-size: 15px;
@@ -146,10 +147,18 @@
         font-size: 14px;
     }
     .slider-container {
-        margin-left: 16%;
+        position: relative;
+        margin-left: 7%;
+      
     }
     .prev-slide{
-        left: 345px;
+        left: 170px;
+        margin-top: 547px;
+        }
+    .next-slide{
+        height: 38px;
+        right: 178px;
+        margin-top: 554px;
     }
 }
 @media only screen and (max-width: 767px) {  
@@ -159,6 +168,16 @@
         font-size: 10px;
     }
     .slider-container{
-        margin-left: 24px;
+        margin-left: 20px;
+    }
+    .next-slide{
+       
+        margin-top: 522px;
+        right: 98px;
+    }
+    .prev-slide{
+        left: 47px;
+        margin-top: 523px;
+
     }
 }

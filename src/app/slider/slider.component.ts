@@ -49,7 +49,7 @@ export class SliderComponent implements OnInit {
   sliderFlag: boolean = false;
   width: any;
   constructor() {
-    this.getScreensize();
+   /*  this.getScreensize(); */
   }
 
   ngOnInit(): void {}
@@ -61,7 +61,7 @@ export class SliderComponent implements OnInit {
     }
   }
 
-@HostListener('window:resize', ['$event'])
+/* @HostListener('window:resize', ['$event'])
 getScreensize(event?): void{
   console.log("innerWidth size ",innerWidth)
    if (innerWidth >= 768 && innerWidth <= 1023){
@@ -75,7 +75,7 @@ getScreensize(event?): void{
    this.visibleSlide = [ ...Array(this.displaySlide).keys() ].map( i => i);
    console.log("visible slide ", this.visibleSlide);
 }
-
+ */
   @HostListener('touchstart', ['$event'])
   touchStart(event): void{
      const touchobj = event.changedTouches[0];
